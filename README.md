@@ -1,7 +1,8 @@
 # Selenium webdriver in C# with Page Object Model design pattern
 
 This framework is implemented for web-based automation projects and developed using a selenium tool and page object model design pattern. It can be used as a template for selenium projects and flexibility to change the code per the project requirements.
-It supports chrome, firefox, and IE browser for local environment testing. Note: It can run on the Cloud (Remote) also like the Browser stack etc. Currently, remote execution work is in-progress.
+It supports chrome, firefox, and IE browser for local environment testing. Also, it supports parallel execution with proper report generation.
+* Note: It can run on the Cloud (Remote) also like the Browser stack etc. Currently, remote execution work is in-progress.
 
 # Pre-requisites
 * Windows OS
@@ -15,6 +16,7 @@ Git clone URL
 1. Visual Studio
 2. Start Visual Studio0
 3.  Click on File>>Open>> Project / SolutionNavigate to the project folder and select "NUnitAutomationFramework.sln"
+
 Or 
 
 Navigate to the project folder and click on "NUnitAutomationFramework.sln"
