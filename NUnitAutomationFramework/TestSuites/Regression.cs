@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using NUnitAutomationFramework.Base;
 using NUnitAutomationFramework.Pages;
 using NUnitAutomationFramework.Utility;
@@ -9,22 +8,22 @@ namespace NUnitAutomationFramework.TestSuites
     [Parallelizable(ParallelScope.Children)]
     public class Regression : BaseSetup
     {
-        [Test]
+        [Test, Category("Regression")]
         public void TC001_OpenTab()
-        {
-            HomePage page = new();
+        { 
             string? testcase = TestContext.CurrentContext.Test.MethodName;
             string testdata = ReadTestData.GetTestData(testcase, "TestData");
             extent_test.Value.Info("Testdata is : " +testdata);
 
             string user = ReadUsers.UserList("Registered_User");
             extent_test.Value.Info("Testdata is : " + user);
-
-            page.OpenTab(GetDriver(), extent_test.Value);
+         
+            HomePage page = new(GetDriver(), extent_test.Value);
+            page.OpenTab();
             extent_test.Value.Pass("Open Tab Testcase is passed");
         }
 
-        [Test]
+        [Test, Category("Regression")]
         public void TC002_MouseOver()
         {
             //To get testdata from xml file
@@ -40,8 +39,8 @@ namespace NUnitAutomationFramework.TestSuites
             string user = ReadUsers.UserList("Registered_User");
             extent_test.Value.Info("user is : " + user);
 
-            HomePage page = new();
-            page.MouseOver(GetDriver(), extent_test.Value);
+            HomePage page = new(GetDriver(), extent_test.Value);
+            page.MouseOver();
             extent_test.Value.Pass("MouseOver Testcase is passed");
         }
     }

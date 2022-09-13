@@ -5,20 +5,28 @@ using AventStack.ExtentReports;
 
 namespace NUnitAutomationFramework.Pages
 {
-    public class HomePage : BaseSetup
+    public class HomePage
     {
+        private readonly IWebDriver driver;
+        private readonly ExtentTest test;
+        public HomePage(IWebDriver driver, ExtentTest test)
+        {
+            this.driver = driver;
+            this.test = test;
+        }
+
         readonly string opentab = "//*[@id='opentab']";
         readonly string mouseover = "//*[@id='mousehover']";
-        readonly string top = "//*[contains(text(), 'Tops')]";
+        readonly string top = "//*[contains(text(), 'Top')]";
 
-        public void OpenTab(IWebDriver driver, ExtentTest test)
+        public void OpenTab()
         {
 
             ActionsElements.Click(driver, By.XPath(opentab));
             test.Log(Status.Info, "Successfully clicked on open tab button");
             
         }
-        public void MouseOver(IWebDriver driver, ExtentTest test)
+        public void MouseOver()
         {
             IWebElement element = ActionsElements.FindElement(driver, By.XPath(mouseover));
             ActionsElements.ScrollToView(driver, element);

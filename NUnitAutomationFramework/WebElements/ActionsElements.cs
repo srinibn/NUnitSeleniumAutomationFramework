@@ -46,7 +46,7 @@ namespace NUnitAutomationFramework.WebElements
                 {
 
                     throw new ActionExpection("Expection during Find Element operation ..");
-                                   }
+                }
             }
             catch (NoSuchElementException ex)
             {
@@ -58,7 +58,7 @@ namespace NUnitAutomationFramework.WebElements
             }
             return element;
         }
-  
+
         public static void ScrollToView(IWebDriver driver, IWebElement element)
         {
             /*
@@ -76,12 +76,13 @@ namespace NUnitAutomationFramework.WebElements
             try
             {
                 IWebElement element = WaitForElementToDisplay(driver, by, timeout);
-                if(element != null)
+                if (element != null)
                 {
                     ScrollToView(driver, element);
                     element.Click();
                 }
-            }catch(StaleElementReferenceException e)
+            }
+            catch (StaleElementReferenceException e)
             {
                 try
                 {
@@ -89,11 +90,13 @@ namespace NUnitAutomationFramework.WebElements
                     IWebElement element = WaitForElementToDisplay(driver, by, timeout);
                     ScrollToView(driver, element);
                     element.Click();
-                }catch(Exception e1)
+                }
+                catch (Exception e1)
                 {
                     throw new ActionExpection("Expection during click operation ..");
                 }
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
 
                 throw new ActionExpection("Expection during click operation ..");
@@ -108,7 +111,7 @@ namespace NUnitAutomationFramework.WebElements
                 SelectElement select = new SelectElement(FindElement(driver, by, timeout));
                 select.SelectByValue(value);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("Unable to select value from dropdown");
             }
@@ -123,6 +126,15 @@ namespace NUnitAutomationFramework.WebElements
         public static void NavigateToUrl(IWebDriver driver, string URL)
         {
             driver.Navigate().GoToUrl(URL);
+        }
+
+        public static void SendKeys(IWebDriver driver, By by, string value)
+        {
+            IWebElement element = WaitForElementToDisplay(driver, by);
+            if (element != null)
+            {
+                element.Clear();
+                element.SendKeys(value);          }
         }
     }
 }
