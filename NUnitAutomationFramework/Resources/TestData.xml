@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+	<TestCase/>
+	<TestCaseId/>
+	<TestData/>
+
+	<TestCase>
+		<TestCaseId>TC001</TestCaseId>
+		<TestData>Verifying TestData</TestData>
+	</TestCase>
+
+	<TestCase>
+		<TestCaseId>TC002</TestCaseId>
+		<TestData>Verifying TestData for testcase TC002</TestData>
+		<Username>Srinivas</Username>
+	</TestCase>
+</TestCases>

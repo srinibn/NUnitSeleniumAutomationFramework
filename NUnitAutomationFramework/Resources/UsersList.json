@@ -1,0 +1,25 @@
+﻿{
+  "QA": {
+    "Default_Users": [
+      "Srinivas",
+      "Naithik"
+    ],
+    "Registered_User": [
+      "Reg_Srinivas",
+      "Reg_Naithik"
+    ]
+
+  },
+  "UAT": {
+    "Default_Users": [
+
+      "Srinivas",
+      "Naithik"
+    ],
+    "Registered_User": [
+      "Reg_Srinivas",
+      "Reg_Naithik"
+    ]
+  }
+
+}
