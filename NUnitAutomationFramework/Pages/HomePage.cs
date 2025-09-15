@@ -7,6 +7,7 @@ namespace NUnitAutomationFramework.Pages
 {
     public class HomePage
     {
+        # Use this file to add page objects 
         private readonly IWebDriver driver;
         private readonly ExtentTest test;
         public HomePage(IWebDriver driver, ExtentTest test)
