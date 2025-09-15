@@ -6,7 +6,7 @@ namespace NUnitAutomationFramework.WebElements
 {
     public class ActionsElements
     {
-
+      # use this file to add custom action elements 
         public static void WaitForPageLoad(IWebDriver driver, int timeout = 5)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
